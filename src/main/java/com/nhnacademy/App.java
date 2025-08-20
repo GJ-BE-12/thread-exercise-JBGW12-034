@@ -38,13 +38,13 @@ public class App
         Thread threadD = new Thread(counterIncreaseHandler, "thread-D");
         Thread threadE = new Thread(counterIncreaseHandler, "thread-E");
 
-        //TODO#4 thrad의 우선순위를 지정할 수 있지만, 실질적인 관리는 운영체제에서 함으로, 동작하는 순서는 다를 수 있습니다.
+        //TODO#4 thread의 우선순위를 지정할 수 있지만, 실질적인 관리는 운영체제에서 함으로, 동작하는 순서는 다를 수 있습니다.
         threadA.setPriority(10);
         threadB.setPriority(1);
         threadC.setPriority(1);
         threadD.setPriority(1);
         threadE.setPriority(1);
-
+        //기아상태 발생 가능한게 A는 우선순위가 10이므로 밀려나고 우선순위가 1인 스레드들 중에 제일먼저 실행되는 B가 무한점유함
         //TODO#5 threadA ~ E 를 시작 합니다.
         threadA.start();
         threadB.start();
