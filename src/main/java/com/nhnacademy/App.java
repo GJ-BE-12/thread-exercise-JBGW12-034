@@ -16,6 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class App {
+    //순환대기가 각각의 스레드끼리 점유하고 있는 자원이 있을 때 서로의 자원을 원하게 되면서 무한 굴레에 빠지게 되는것...
 
     private static final Object resource1 = new Object();
     private static final Object resource2 = new Object();
