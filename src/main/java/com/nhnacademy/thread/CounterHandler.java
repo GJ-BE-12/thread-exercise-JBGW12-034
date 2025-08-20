@@ -32,12 +32,13 @@ public class CounterHandler implements Runnable  {
     @Override
     public void run() {
         do {
+            count++;
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            count++;
+
             log.debug("thread:{},count:{}",Thread.currentThread().getName(),count);
         }while (count<countMaxSize);
     }
