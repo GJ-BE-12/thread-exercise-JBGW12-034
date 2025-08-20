@@ -13,7 +13,9 @@
 package com.nhnacademy;
 
 import lombok.extern.slf4j.Slf4j;
-
+//점유 대기 -> 스레드1가 자원 1을 점유, 사용 후 unlock하지 않고 대기
+// 스레드2가 자원 2를 점유, 사용 후 unlock하지 않고 대기
+// 각각의 스레드는 서로의 자원을 원함 == 점유 대기 상태로 빠짐
 @Slf4j
 public class App {
 
