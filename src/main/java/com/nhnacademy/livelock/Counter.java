@@ -24,7 +24,7 @@ public class Counter {
 
     public void increment() {
         while (true) {
-            if (lock.tryLock()) {
+            if (lock.tryLock()) { //lock 시도
                 try {
                     count++;
                     log.debug("{} count++ : {}", Thread.currentThread().getName(), count );
